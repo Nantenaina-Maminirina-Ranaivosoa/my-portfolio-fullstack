@@ -1,0 +1,55 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+.navbar-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.6rem;
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.2s, color 0.3s;
+}
+
+.navbar-links li a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+.active {
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 3px;
+  }
